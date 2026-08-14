@@ -22,23 +22,29 @@ In the scans Blue represents an object and green represents a place where the ar
 
 # Scan 1
 Data:
-<img width="500" height="auto" alt="sweep1" src="https://github.com/user-attachments/assets/97d9da84-84ec-48e3-a121-04192f487dda" />
+
+<img width="auto" height="250" alt="sweep1" src="https://github.com/user-attachments/assets/97d9da84-84ec-48e3-a121-04192f487dda" />
 
 Environment:
-<img width="500" height="auto" alt="sweep1Image" src="https://github.com/user-attachments/assets/d33bd8da-1bb0-48bb-b805-151f8959cb40" />
+
+<img width="auto" height="500" alt="sweep1Image" src="https://github.com/user-attachments/assets/d33bd8da-1bb0-48bb-b805-151f8959cb40" />
 
 # Scan 2:
 Data:
-<img width="500" height="auto" alt="sweep2" src="https://github.com/user-attachments/assets/51d24947-7b17-470e-b905-055a0a573397" />
+
+<img width="auto" height="250" alt="sweep2" src="https://github.com/user-attachments/assets/51d24947-7b17-470e-b905-055a0a573397" />
 
 Environment:
-<img width="500" height="auto" alt="sweep2Image" src="https://github.com/user-attachments/assets/c658a076-73c1-437a-a405-287650d86e57" />
+
+<img width="auto" height="500" alt="sweep2Image" src="https://github.com/user-attachments/assets/c658a076-73c1-437a-a405-287650d86e57" />
 
 
 # Scan 3:
 Data:
-<img width="500" height="auto" alt="sweep3" src="https://github.com/user-attachments/assets/ae1fa974-555c-4272-b429-14625a295312" />
+
+<img width="auto" height="250" alt="sweep3" src="https://github.com/user-attachments/assets/ae1fa974-555c-4272-b429-14625a295312" />
 
 Environment:
-<img width="500" height="auto" alt="sweep3Image" src="https://github.com/user-attachments/assets/067356d9-3f5e-492b-b8cf-6f7ef0b96982" />
+
+<img width="auto" height="500" alt="sweep3Image" src="https://github.com/user-attachments/assets/067356d9-3f5e-492b-b8cf-6f7ef0b96982" />
 
