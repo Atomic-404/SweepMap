@@ -16,3 +16,29 @@ I am using a "VL53LXX-V2" Time of Flight (ToF) sensor mounted on a generic 9g se
 1. Get incoming point data and convert it to custom byte structure (FTTSSSSS. 1 Flag bit, 2 Type bits, 5 Score bits)
 2. Save the point to a list for all the points in the area and check if the scan finished.
 3. If the scan finished launch mapVisualiser.py to make a grid using matplotlib, else back to 1.
+
+# Scans:
+In the scans Blue represents an object and green represents a place where the area is clear. Darker (Closer to black) means lower confidence and brighter (More saturated) means a higher confidence
+
+# Scan 1
+Data:
+<img width="839" height="481" alt="sweep1" src="https://github.com/user-attachments/assets/97d9da84-84ec-48e3-a121-04192f487dda" />
+
+Environment:
+<img width="2152" height="3072" alt="sweep1Image" src="https://github.com/user-attachments/assets/d33bd8da-1bb0-48bb-b805-151f8959cb40" />
+
+# Scan 2:
+Data:
+<img width="841" height="488" alt="sweep2" src="https://github.com/user-attachments/assets/51d24947-7b17-470e-b905-055a0a573397" />
+
+Environment:
+<img width="3070" height="2854" alt="sweep2Image" src="https://github.com/user-attachments/assets/c658a076-73c1-437a-a405-287650d86e57" />
+
+
+# Scan 3:
+Data:
+<img width="843" height="490" alt="sweep3" src="https://github.com/user-attachments/assets/ae1fa974-555c-4272-b429-14625a295312" />
+
+Environment:
+<img width="3072" height="4096" alt="sweep3Image" src="https://github.com/user-attachments/assets/067356d9-3f5e-492b-b8cf-6f7ef0b96982" />
+
