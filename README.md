@@ -9,17 +9,26 @@ I am using a "VL53LXX-V2" Time of Flight (ToF) sensor mounted on a generic 9g se
 2. Order the list from lowest to highest then extract the mean.
 3. Using a linear interpolation calibrate the mean against the table. (One entry every 50mm, can be changed if needed)
 4. Calculate a confidence value based on the distance from the sensor and spread of the 5 readings. A further distance or less accurate (higher spread) returns a lower confidence.
-5. convert distance+angle to (x,y) coordinates and send those and the confidence over the bridge to the Python script
-6. Increment angle then back to 1
+5. convert distance+angle to (x,y) coordinates and send those and the confidence over the bridge to the Python script.
+6. Increment angle then back to 1.
 
 # Process on Python:
 1. Get incoming point data and convert it to custom byte structure (FTTSSSSS. 1 Flag bit, 2 Type bits, 5 Score bits)
 2. Save the point to a list for all the points in the area and check if the scan finished.
-3. Using the most recent point follow the ray from the sensor to mark clear cells
+3. Using the most recent point follow the ray from the sensor to mark clear cells.
 4. If the scan finished launch mapVisualiser.py to make a grid using matplotlib, else back to 1.
 
-# Scans:
-In the scans blue represents a cell with an object and green represents a known empty cell. Darker (Closer to black) means lower confidence and brighter (More saturated) means a higher confidence. Over multiple scans of the same area confidence values can be used to determine where stationary objects are while keeping the map accurate if something moved or if a bad scan was taken.
+# Limitations:
+- This only takes ONE scan at a time and cannot compare other scans. It could be easily modified to save each scan file separately but for now we only have the most recent.
+- Current scan settings cannot be changed on the fly. This could also be a future improvement but this specific sensor would not benefit from any higher accuracy.
+- Some objects return out of range when they are very close (<45cm/18in) and this setup assumes that if the sensor returns out of range it is clear.
+- Objects can appear in more than one cell (Like a wall showing two cells thick) and there is not a good way to prevent this.
+- Confidence for open areas is only based on distance to the point its calculated for. If there is another point in the area it wont be taken into account.
+- This does not take into account the time for servo movement. This causes the 1st point when the servo turns from 180 to 0 to often get ruined. This could be fixed by switching direction of the scan or just adding a delay for the movement.
+
+# Usage examples:
+In the scans blue represents a cell with an object and green represents a known empty cell. Darker (Closer to black) means lower confidence and brighter (More saturated) means a higher confidence. Over multiple scans of the same area confidence values can be used to determine where stationary objects are while keeping the map accurate if something moved or if a bad scan was taken. 
+Note: The sensor is on the cardboard box in the bottom of the images. The images and maps are not the same scale but represent the same objects.
 
 # Scan 1
 Data:
@@ -31,7 +40,7 @@ Environment:
 <img width="auto" height="500" alt="sweep1Image" src="https://github.com/user-attachments/assets/d33bd8da-1bb0-48bb-b805-151f8959cb40" />
 
 Description:
-This scan showed the box in the center of the area with free space all around. This is how the sensor can be used to identify walls or other large obsicalls with high confidence.
+This scan showed the box in the center of the area with free space all around. This is how the sensor can be used to identify walls or other large obstacles with high confidence.
 
 # Scan 2:
 Data:
